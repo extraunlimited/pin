@@ -1,0 +1,19 @@
+
+<%= @product.title %>
+
+<p><%= image_tag @product.image_1.medium.url %></p>
+
+
+<%= simple_format @product.description %>
+
+<%= simple_form_for [@product, @order_item] do |f| %>
+  <%= f.input :quantity %>
+
+  <%= f.button :submit, "add to cart" %>
+
+<% end %>
+
+
+
+<p>
+  <%= link_to "all product", products_path %>

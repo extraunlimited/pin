@@ -10,6 +10,24 @@
   </head>
 
   <body>
+
+    <h1> <%= link_to "le titre de smon site", root_path  %> </h1>
+
+
+    <nav>
+
+      <%= link_to "shop", products_path %>
+      <%= link_to "about", info_path %>
+      <%= link_to "#" do %>
+        cart #<%= @current_cart.id%> (0)
+      <% end %>
+
+    </nav>
+
+
+
     <%= yield %>
+
+
   </body>
 </html>
