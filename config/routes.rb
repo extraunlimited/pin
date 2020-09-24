@@ -6,8 +6,9 @@ Rails.application.routes.draw do
 
   resources :products do
     resources :order_items
-
   end
+
+  resource :cart
 
   get "info", to: "pages#info"
 

@@ -18,11 +18,18 @@
 
       <%= link_to "shop", products_path %>
       <%= link_to "about", info_path %>
-      <%= link_to "#" do %>
-        cart #<%= @current_cart.id%> (0)
+      <%= link_to cart_path do %>
+        cart (<%= @current_cart.total_quantity %>)
       <% end %>
 
     </nav>
+
+
+    <% if flash[:success].present? %>
+      <div class="flash">
+          <%= flash[:success] %>
+        </div>
+    <% end %>
 
 
 
