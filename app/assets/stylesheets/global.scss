@@ -1,62 +1,118 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Playfair+Display:400,700');
-
-$white: #FFFFFF;
-$black: #000000;
-$grey: #EDEDEB;
-$accent: #A31621;
-
-$scriptFont: "Playfair Display";
-$sansFont: "Karla";
-
 body {
-  font-family: $sansFont;
-  color: $black;
-}
-
-header, main, footer {
-  padding: 20px;
+  font-family: helvetica;
 }
 
 a {
-  color: $accent;
-  text-decoration: none;
-  border-bottom: 0.1em solid rgba($accent, 0.25);
-  transition: border-bottom-color 0.25s;
-
-  &:hover {
-    border-bottom-color: $accent;
-  }
+  color:black;
+  text-decoration:  none;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  h1 {
-    margin: 0;
-  }
-
-  nav a {
-    margin: 0 0 0 10px;
-  }
+a:hover {
+  color:cyan;
 }
 
-footer {
-  color: #999;
+.title {
+  font-size: 2.5vw;
+  font-weight: bold;
+  // background-color: lime;
+
+  display: inline;
+  position: fixed;
+  top:0;
+  left:0;
+
+}
+
+.nav {
+  font-size: 2.5vw;
+
+  // background-color: red;
+
+  display: inline;
+  position: fixed;
+  top:0;
+  right:0;
+}
+
+.login_home {
+
+  position: absolute;
+
+  top:10vw;
+  left: 10vw;
+
+  width:35vw;
+  transform: rotate(1deg);
 }
 
 
-div.product {
-  width: 200px;
+.image_featured {
 
-  img {
-    width: 100%;
-  }
+  width:45vw;
+  position: absolute;
+
+  top: 3vw;
+  right: 10vw;
 }
 
-div.flash{
-  background: $accent;
-  color: $white;
-  padding: 10px 20px 10px 20px;
+.title_featured {
+  font-size: 1.5vw;
+  font-weight: bold;
+
+}
+.price_featured {
+  font-size: 1.5vw;
+  color:red;
+
+.buy_featured {
+  position: absolute;
+  right:0;
+  color: red;
+}
+
+}
+.text_featured {
+  position: relative;
+  top: 23vw;
+  left: 42vw;
+  line-height: 0.5vw;
+
+  // border: solid 0.2vw black;
+  // border-radius: 50px;
+  width: 12vw;
+
+  padding-left: 1vw;
+  padding-right: 0.5vw;
+}
+
+
+.product_title {
+
+  position: absolute;
+  top:10vw;
+  left: 60vw;
+
+  font-size: 3vw;
+
+  font-weight: bold;
+}
+
+.product_cart {
+
+  position: absolute;
+  top:15vw;
+  left: 60vw;
+}
+
+.product_button {
+
+  background-color: white;
+  border: solid 0.1vw black;
+  border-radius: 50px;
+}
+
+.product_image {
+
+  position: absolute;
+  top:5vw;
 }

@@ -1,0 +1,19 @@
+<h1> thanks you order </h1>
+
+
+
+
+
+
+<%= link_to "back home", root_path %>
+
+
+
+<%= @order.first_name %>
+<%= @order.city %>
+
+<%= @order.order_items.each do |item| %>
+
+  <%= item.product.title %>
+
+<% end %>

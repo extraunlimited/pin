@@ -1,11 +1,16 @@
-<h1> home!!!!!!!  </h1>
+
+
+<br>
+<br>
+
+<br>
+<!-- <p> featured: </p> -->
+
+
+<%= image_tag "login_home.png", class: "login_home"  %>
+
+<%= render partial: "products/product_large", collection: @featured_products %>
 
 
 
-<p> featured: </p>
-
-<%= render partial: "products/product", collection: @featured_products %>
-
-
-
-<%= link_to "all product", products_path %>
+<%= link_to "", products_path %>

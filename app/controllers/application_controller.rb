@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
 
   before_action :current_cart
   helper_method :current_cart
+  before_action :reset_session
+  # skip_before_action :verify_authenticity_token
 
   def current_cart
     if session[:cart_id].present?

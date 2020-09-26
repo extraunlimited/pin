@@ -1,19 +1,29 @@
 
-<%= @product.title %>
-
-<p><%= image_tag @product.image_1.medium.url %></p>
 
 
+<p class="product_image"><%= image_tag @product.image_1.medium.url %></p>
+
+
+<p class="product_title"> <%= @product.title %> </p>
+
+<div class="product_cart">
 <%= simple_format @product.description %>
+<%= number_to_currency @product.price_in_dollars %>
+
 
 <%= simple_form_for [@product, @order_item] do |f| %>
   <%= f.input :quantity %>
 
-  <%= f.button :submit, "add to cart" %>
+  <%= f.button :submit, "add to cart", class: "product_button" %>
 
 <% end %>
 
+</div>
 
 
-<p>
+
+
+
+<!-- <p>
   <%= link_to "all product", products_path %>
+</p> -->

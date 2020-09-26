@@ -1,0 +1,12 @@
+
+
+
+  <%= link_to product_path(product_large) do %>
+    <%= image_tag product_large.image_1.large.url, class: "image_featured" %>
+  <% end %>
+
+<div class="text_featured">
+<p> <%= link_to product_large.title, product_path(product_large), class: "title_featured" %></p>
+<p> <%= number_to_currency product_large.price_in_dollars, class: "price_featured" %>
+    /     <%= link_to "buy", product_path(product_large), class: "buy_featured" %> </p>
+</div>

@@ -6,23 +6,24 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <!-- <script src="https://js.stripe.com/v3/"></script> -->
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+     <%= link_to "Login Studio", root_path, class: "title"  %>
 
-    <h1> <%= link_to "le titre de smon site", root_path  %> </h1>
 
+  <nav class="nav">
 
-    <nav>
-
-      <%= link_to "shop", products_path %>
-      <%= link_to "about", info_path %>
+      <%= link_to "shop", products_path %> /
+      <%= link_to "about", info_path %> /
       <%= link_to cart_path do %>
-        cart (<%= @current_cart.total_quantity %>)
+        cart (<%= @current_cart.total_quantity %>)<!-- (<%= number_to_currency @current_cart.total_price_in_dollars %>)-->
       <% end %>
 
-    </nav>
+    </nav> 
 
 
     <% if flash[:success].present? %>
